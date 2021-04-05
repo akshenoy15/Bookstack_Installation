@@ -12,15 +12,15 @@ Bookstack provides multiple configuration options including setting up space wit
 Need to run from command-line for installation and maintenance.
 {% endhint %}
 
-   2 .  MySQL 5.6 and above      
+2. MySQL 5.6 and above.     
 
 {% hint style="info" %}
 For storing information from Bookstack in a proper database
 {% endhint %}
 
-   3. [Composer](https://getcomposer.org/)
+3. [Composer](https://getcomposer.org/)
 
-   4. Git version control \(optional\).
+4. Git version control \(optional\).
 
 {% hint style="info" %}
 Install Ubuntu 18.04 LTS in your system from [Ubuntu for desktop or laptop](https://ubuntu.com/download/desktop).
@@ -42,7 +42,7 @@ apt install -y build-essential software-properties-common curl gdebi net-tools w
 apt-transport-https
 ```
 
-    2.  Including Apache2, PHP, MariaDB modules:
+2.  Including Apache2, PHP, MariaDB modules:
 
 ```c
 add-apt-repository ppa:ondrej/php -y
@@ -54,15 +54,15 @@ systemctl start apache2 mariadb
 systemctl enable apache2 mariadb
 ```
 
-    3.  Securely installing MySQL:
+3.  Securely installing MySQL:
 
 ```c
 mysql_secure_installation
 ```
 
-   4. Creating a MariaDB database:
+4. Creating a MariaDB database:
 
- After installing Mysql you will find a SQL prompt. Execute the following
+   After installing Mysql you will find a SQL prompt. Execute the following
 
 ```c
 mysql -u root -p
@@ -80,7 +80,7 @@ chown -R www-data:www-data /var/www/html/ ;
 chmod -R 755 /var/www/html/
 ```
 
-  5. Next set up an Apache virtual host.
+5. Next set up an Apache virtual host.
 
 ```c
 gedit /etc/apache2/sites-available/new-domain.conf
@@ -105,7 +105,7 @@ _If gedit is not supported install it using_ _**apt gedit install**_ _on your sc
 </VirtualHost>
 ```
 
-  6. After editing, run the following commands
+ 6. After editing, run the following commands
 
 ```c
 a2ensite new-domain
@@ -115,7 +115,7 @@ echo "192.168.1.50 www.new-domain.com" >> /etc/hosts
 systemctl reload apache2
 ```
 
-  7.  After reloading apache2 server login with the provided credentials in the new domain.
+ 7.  After reloading apache2 server login with the provided credentials in the new domain.
 
 [http://www.new-domain.com](http://www.new-domain.com/)
 
