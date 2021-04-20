@@ -36,7 +36,7 @@ mysql_secure_installation
 
 * Creating a **MariaDB** database:
 
-     After installing Mysql you will find a SQL prompt. Execute the following
+        After installing Mysql you will find a SQL prompt. Execute the following
 
 ```c
 mysql -u root -p

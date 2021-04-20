@@ -1,5 +1,5 @@
 ---
-description: Installation on Ubuntu
+description: Installation of BookStack on Ubuntu
 ---
 
 # Bookstack Installation Guide
