@@ -4,7 +4,7 @@ description: Script to Install Bookstack on Ubuntu 18.04 LTS
 
 # Installation
 
-Checking the release, hostname and fetching essential properties and release requisites.
+* Checking the release, hostname and fetching essential properties and release requisites.
 
 ```c
 lsb_release -cd
@@ -16,7 +16,7 @@ apt install -y build-essential software-properties-common curl gdebi net-tools w
 apt-transport-https
 ```
 
-  Including **Apache2, PHP, MariaDB** modules:
+*  Including **Apache2, PHP, MariaDB** modules:
 
 ```c
 add-apt-repository ppa:ondrej/php -y
@@ -28,15 +28,15 @@ systemctl start apache2 mariadb
 systemctl enable apache2 mariadb
 ```
 
-Securely installing **MySQL**:
+* Securely installing **MySQL**:
 
 ```c
 mysql_secure_installation
 ```
 
-Creating a **MariaDB** database:
+* Creating a **MariaDB** database:
 
-After installing Mysql you will find a SQL prompt. Execute the following
+        After installing Mysql you will find a SQL prompt. Execute the following
 
 ```c
 mysql -u root -p
@@ -54,7 +54,7 @@ chown -R www-data:www-data /var/www/html/ ;
 chmod -R 755 /var/www/html/
 ```
 
-Next set up an **Apache virtual host**.
+* Next set up an **Apache virtual host**.
 
 ```c
 gedit /etc/apache2/sites-available/new-domain.conf
@@ -81,7 +81,7 @@ _If gedit is not supported install it using_ _**apt gedit install**_ _on your sc
 
 
 
-1. After editing, run the following commands
+* After editing, run the following commands
 
 ```c
 a2ensite new-domain
@@ -91,7 +91,7 @@ echo "192.168.1.50 www.new-domain.com" >> /etc/hosts
 systemctl reload apache2
 ```
 
-1. After reloading the apache2 server **login** with the provided credentials in the new domain.
+*  After reloading the apache2 server **login** with the provided credentials in the new domain.
 
 [http://www.new-domain.com](http://www.new-domain.com/)
 
