@@ -4,7 +4,7 @@ description: Script to Install Bookstack on Ubuntu 18.04 LTS
 
 # Installation
 
-* Checking the release, hostname and fetching essential properties and release requisites.
+* Checking the release, hostname, and fetching essential properties and release requisites.
 
 ```c
 lsb_release -cd
@@ -36,7 +36,7 @@ mysql_secure_installation
 
 * Creating a **MariaDB** database:
 
-        After installing Mysql you will find a SQL prompt. Execute the following
+     After installing Mysql you will find a SQL prompt. Execute the following
 
 ```c
 mysql -u root -p
@@ -101,5 +101,5 @@ _Password_: **password**
 
 ![BookStack Login page](.gitbook/assets/image.png)
 
-To test the  UI platform and gain first- hand experience use the  [demo site](https://demo.bookstackapp.com/) provided by Bookstack. You can also check their features, overviews and settings [here](https://www.bookstackapp.com/).
+To test the  UI platform and gain first- hand experience, use the [demo site](https://demo.bookstackapp.com/) provided by Bookstack. You can also check their features, overviews, and settings [here](https://www.bookstackapp.com/).
 
